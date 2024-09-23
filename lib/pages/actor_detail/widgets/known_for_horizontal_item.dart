@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movie_app/common/utils.dart';
 import 'package:movie_app/models/actor_model.dart';
-import 'package:movie_app/pages/movie_detail/movie_detail_page.dart';
 
 class KnownForHorizontalItem extends StatelessWidget {
   const KnownForHorizontalItem({
@@ -13,14 +12,7 @@ class KnownForHorizontalItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        Navigator.of(context).push(MaterialPageRoute(
-            builder: (context) => MovieDetailPage(
-                  movieId: movie?.id ?? 0,
-                )));
-      },
-      child: Stack(
+    return Stack(
         children: [
           Container(
             height: 200,
@@ -106,7 +98,6 @@ class KnownForHorizontalItem extends StatelessWidget {
             ),
           )
         ],
-      ),
-    );
+      );
   }
 }
